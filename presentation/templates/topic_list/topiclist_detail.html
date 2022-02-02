@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1> Topic : {{object.topic}} </h1>
+
+<h2> Date of Presentation : {{object.presentation_date}} </h2>
+<h3> Multiple Presenters : {{object.multi_person}} </h3>
+
+<p> {{ object.note }}</p>
+
+<a href="{% url 'topic-update' object.id %}"><button>Edit</button></a>
+<a href="{% url 'topic-delete' object.id %}"><button>Delete</button></a>
+{% endblock %}
